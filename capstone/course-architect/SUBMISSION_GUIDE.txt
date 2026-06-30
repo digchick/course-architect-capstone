@@ -1,0 +1,128 @@
+==========================================================================
+  COURSE ARCHITECT — FINAL SUBMISSION GUIDE   (start here)
+  Google x Kaggle 5-Day AI Agents Intensive — Capstone
+  Deadline: Mon 6 July 2026, 23:59 Pacific time
+==========================================================================
+
+EVERYTHING IS BUILT. You only have to do THREE things:
+   1) Record a short video (<=5 min)        -- guide below, Part B
+   2) Put that video on YouTube             -- Part C
+   3) Fill in the Kaggle submission         -- Part D
+
+All the files you need are in this folder:
+   C:\Projects\google-ai-agents-vibecoding\capstone\course-architect\
+
+   WRITEUP.md ............ the report -> paste this into Kaggle (Part D)
+   cover.png ............. the cover image -> upload to Kaggle (Part D)
+   capstone_notebook.ipynb  the code -> upload to Kaggle (Part D)
+   VIDEO_SCRIPT.md ....... what to say/show while recording (Part B)
+   Describe a Course.bat . the live demo to record
+   My Course.pptx / Excel Course.pptx / course_gemini.pptx  finished decks to show
+
+
+==========================================================================
+  PART A — WHAT THE JUDGES WANT (30-second read)
+==========================================================================
+A real AI agent that solves a real problem, explained well. We have that:
+"Course Architect" turns a plain-English topic into a finished, branded
+PowerPoint course, and checks its own work. Track = AGENTS FOR BUSINESS.
+
+A valid submission needs ALL of:  a written report (<=2500 words),
+a cover image, a YouTube video (<=5 min), and a public code link.
+We have the report (WRITEUP.md = 1,245 words), the cover, the code
+(the notebook), and a script for the video.
+
+
+==========================================================================
+  PART B — RECORD THE VIDEO  (easiest first)
+==========================================================================
+Open VIDEO_SCRIPT.md and keep it on screen to read from. Then:
+
+OPTION 1 — Clipchamp (already on Windows 11, records the whole screen + your voice)
+  1. Click Start, type "Clipchamp", open it (sign in / skip if asked).
+  2. Click "Record something" -> "Screen recording" (camera icon on the left).
+  3. Turn the microphone ON (so it records your voice). Webcam is optional.
+  4. Click the red Record button -> choose "Entire screen" -> Share.
+  5. Now do the demo while reading the [SAY] lines from VIDEO_SCRIPT.md:
+        - double-click "Describe a Course.bat", type an Excel topic, press Enter
+        - when "My Course.pptx" opens, scroll through the slides, show the Notes
+        - talk over the cover image and the architecture/coverage points
+  6. Click Stop. Clipchamp drops the clip onto its timeline.
+  7. (Optional) trim the start/end by dragging the clip edges.
+  8. Click "Export" (top right) -> 1080p -> it saves an .mp4 to your Downloads.
+  >>> Keep it UNDER 5 minutes. About 4 is perfect. Practice once first.
+
+OPTION 2 — Xbox Game Bar (quickest, but records ONE app window, not File Explorer)
+  - Press Win + G, click the Record (circle) button, do your demo inside ONE
+    window (e.g. PowerPoint), press Win + Alt + R to stop. The clip saves to
+    Videos\Captures. Good if you only want to narrate over the finished deck.
+
+TIP: If a live build makes you nervous, just open one of the finished decks
+(course_gemini.pptx or Excel Course.pptx) and TALK OVER IT. Showing the real
+slides + explaining how the agent made them is a perfectly good video.
+
+
+==========================================================================
+  PART C — PUT THE VIDEO ON YOUTUBE
+==========================================================================
+You found your channels: main = vieve.cooper@gmail.com (Mark Cooper),
+and a brand channel "coopie007". EITHER is fine. Then:
+
+  1. Go to  youtube.com  and make sure you're signed in.
+     (Top-right circle -> if you want to post as "coopie007", click it ->
+      "Switch account" -> choose coopie007. Otherwise just use your main one.)
+  2. Click the "Create" button (video-camera with a +, top right) -> "Upload video".
+  3. Drag in the .mp4 you exported (Clipchamp = Downloads, Game Bar = Videos\Captures).
+  4. Title:  Course Architect — 5-Day AI Agents Intensive Capstone
+     Description (optional): one line about the project.
+  5. "Audience": select  "No, it's not made for kids."  -> Next, Next, Next.
+  6. "Visibility": choose  UNLISTED  (anyone with the link can watch; it won't show
+     up in search) -- this is the safe choice for a contest. (Public is also fine.)
+  7. Click  Publish / Save.  Then COPY THE VIDEO LINK (the share URL). You'll paste
+     it into Kaggle in Part D.
+
+
+==========================================================================
+  PART D — SUBMIT ON KAGGLE
+==========================================================================
+Competition page:
+  https://www.kaggle.com/competitions/vibecoding-agents-capstone-project
+
+STEP 1 — Accept the rules (if you haven't): open the page -> "Rules" tab ->
+         "I Understand and Accept".
+
+STEP 2 — Upload the code as a Kaggle notebook (this is the "public code link"):
+  a. On the competition page click "Code" -> "New Notebook".
+  b. In the notebook: File -> Import Notebook -> upload
+        capstone_notebook.ipynb   (from this folder).
+  c. (Optional, for live Gemini) Add-ons -> Secrets -> add a secret named
+        GOOGLE_API_KEY  with your AI Studio key. It runs fine WITHOUT this too.
+  d. Click "Save Version" -> "Save & Run All". When it finishes, set the
+     notebook to PUBLIC (Share -> Public). Copy its URL.
+
+STEP 3 — Create the Writeup (the report) and submit:
+  a. On the competition page, find "Writeups" -> "New Writeup"
+     (or the "Submit"/"New Submission" button -> it leads to a Writeup).
+  b. TITLE:  Course Architect
+     SUBTITLE: An AI agent that turns a sentence into a finished training course
+  c. BODY: open WRITEUP.md, copy everything, paste it in. (It's already <2500 words.)
+  d. COVER IMAGE: upload  cover.png  from this folder.
+  e. MEDIA / VIDEO: paste your YouTube link (from Part C) so the video shows in
+     the gallery.
+  f. CODE / NOTEBOOK: attach or link the notebook you saved in Step 2.
+  g. TRACK: choose  "Agents for Business".
+  h. Click  Save,  then the  "Submit"  button (usually top-right). Done!
+
+You'll get a confirmation. That's the whole submission.
+
+
+==========================================================================
+  IMPORTANT — AFTER YOU SUBMIT
+==========================================================================
+* ROTATE YOUR API KEY. The key you pasted earlier is in our chat history.
+  Go to aistudio.google.com -> API keys -> delete that key -> create a new one.
+  (If you added it as a Kaggle Secret, update the Secret with the new key.)
+* Nothing else is needed. The notebook runs with or without a key.
+
+Questions when you're back? Just ask. Good luck — it's a strong entry.
+==========================================================================

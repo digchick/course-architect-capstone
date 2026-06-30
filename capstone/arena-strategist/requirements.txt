@@ -1,0 +1,5 @@
+# Core arena + agent: Python 3.10+ standard library only (no install needed).
+#
+# Optional extras:
+matplotlib        # only for the Elo-climb plot in capstone_notebook.ipynb
+google-generativeai>=0.8.0   # only to enable the real Gemini Proposer/Critic

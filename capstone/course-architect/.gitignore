@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pptx
+course_state.json
+executed.ipynb
+.ipynb_checkpoints/

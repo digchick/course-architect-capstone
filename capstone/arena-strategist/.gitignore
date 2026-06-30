@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+arena_memory.json
+.ipynb_checkpoints/
+executed.ipynb

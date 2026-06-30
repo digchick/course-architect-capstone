@@ -1,0 +1,37 @@
+HOW TO MAKE A COURSE  -  Course Architect
+==========================================
+
+You describe what you want. The AI designs the outline AND writes the whole course.
+
+
+EASIEST WAY  -  just describe it
+-------------------------------
+1. Double-click  "Describe a Course.bat"
+2. Type what you want, for example:
+      How to write basic Excel formulas for office staff
+3. Press Enter. The agent designs the course and opens it as "My Course.pptx".
+
+
+OR  -  if you want to control the outline yourself
+--------------------------------------------------
+1. Open  "MY_COURSE.md"  in Notepad.
+2. Either:
+     (a) write ONE line = your topic, e.g.   Customer service for new staff
+         (the AI designs the whole outline for you), OR
+     (b) write the outline yourself:
+            # Course Title
+            Audience: Who it is for
+            ## A section heading
+            - a point to teach
+            - another point
+3. Save it, then double-click  "Make My Course.bat".
+
+Your finished deck opens as  "My Course.pptx".
+(Close that file before rebuilding, or it can't save over it.)
+
+------------------------------------------------------------------
+Notes
+- Real AI content uses the Gemini key (already set up in .env).
+  On the free tier the default model allows ~80 courses a day - no
+  billing needed for normal use.
+- With no key it still runs, using simpler built-in text.

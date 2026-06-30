@@ -1,0 +1,6 @@
+# Core:
+python-pptx>=1.0          # assembles the .pptx deck
+
+# Notebook extras / optional:
+matplotlib                # only for the in-notebook slide preview
+google-genai>=1.0         # only to enable the Gemini-written content path (supported SDK)
