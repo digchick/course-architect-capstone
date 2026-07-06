@@ -10,15 +10,25 @@ Reusable expertise the agent loads before planning and writing slides (course Da
   input bullet(s) each slide addresses in its `covers` field.
 
 ## Structure
-- One clear idea per content slide. Prefer 3–5 bullets; never more than 6.
+- One clear idea per content slide. Prefer 4–6 substantial bullets; never more than 6.
+- Bullets teach, not tease: each is a complete, specific statement (roughly 8–16 words)
+  that carries real information — a rule, a step, a criterion, a consequence — not a
+  vague label like "overview" or "why it matters".
 - Each module starts from a single learning **objective** ("By the end, learners can…").
-- Bullets are short, parallel, action-oriented phrases — not full paragraphs.
+- Bullets are parallel and action-oriented — informative phrases, not full paragraphs.
 - Group closely related input bullets onto one slide; split a dense bullet into its
   own slide if it carries several distinct ideas.
 
+## Worked example (every content slide)
+- Every content slide includes an `example`: ONE concrete worked example, mini-scenario,
+  or do/don't specific to that slide's idea — something a learner could actually try or
+  recognise (numbers, named situations, real phrasing; not "e.g. various cases").
+- Keep it to one or two sentences; it renders in a highlighted example box.
+
 ## Speaker notes
-- Every content slide gets concise speaker notes (2–4 sentences): what to say, an
-  example or analogy, and a transition. Notes carry the depth; slides stay clean.
+- Every content slide gets substantial speaker notes (3–5 sentences): what to say in the
+  trainer's voice, a second example or analogy, a common mistake to warn about, and a
+  check question or transition. Notes carry the depth; slides stay clean.
 
 ## Tone
 - Match the stated audience and level. Concrete over abstract. Plain language.

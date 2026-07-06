@@ -134,6 +134,7 @@ class MockProvider(CourseProvider):
                     "A common pitfall to avoid",
                     "One step to apply it this week",
                 ],
+                "example": f"Walk through one real case of '{b}' step by step with the group.",
                 "notes": (f"Explain '{b}' with a concrete example relevant to {audience}. "
                           f"Give one do and one don't, then check understanding."),
                 "covers": [b],
@@ -154,19 +155,24 @@ OUTPUT STRICT JSON only:
  "modules": [{"title": "...", "objective": "By the end, learners can ...",
  "source_bullets": ["...exact input bullets for this module..."], "slide_count": <int>}]}"""
 
-_WRITER_SYSTEM = """You are an expert courseware writer. You turn ONE module into clean \
-content slides. Follow the skill rules: one idea per slide, 3-5 short parallel \
-bullets, concise speaker notes on every slide, and expand ONLY the given source \
-bullets (do not invent new topics). In each slide's "covers", copy the exact source \
-bullet text(s) that slide addresses, so coverage can be verified.
+_WRITER_SYSTEM = """You are an expert courseware writer. You turn ONE module into rich, \
+teachable content slides. Follow the skill rules strictly: one idea per slide; 4-6 \
+SUBSTANTIAL parallel bullets (each a complete, specific statement of ~8-16 words that \
+carries real information — a rule, step, criterion or consequence — never vague labels); \
+ONE concrete worked "example" per slide (a real mini-scenario, numbers, or do/don't a \
+learner could try — one or two sentences); substantial speaker "notes" (3-5 sentences in \
+the trainer's voice: what to say, a second example or analogy, a common mistake, a check \
+question). Expand ONLY the given source bullets (do not invent new topics). In each \
+slide's "covers", copy the exact source bullet text(s) that slide addresses, so coverage \
+can be verified.
 OUTPUT STRICT JSON only:
-{"slides": [{"title": "...", "bullets": ["...", "..."], "notes": "...",
+{"slides": [{"title": "...", "bullets": ["...", "..."], "example": "...", "notes": "...",
  "covers": ["...exact source bullet..."]}]}"""
 
 _OUTLINE_SYSTEM = """You are an expert instructional designer. Given a short topic, \
 design a practical course OUTLINE for it. Choose a clear, specific course title and a \
-sensible target audience, then 3-5 modules that cover the topic end to end in a logical \
-order. Each module has 3-5 concrete, teachable bullet points — real sub-topics a learner \
+sensible target audience, then 4-5 modules that cover the topic end to end in a logical \
+order. Each module has 4-5 concrete, teachable bullet points — real sub-topics a learner \
 actually needs (e.g. for "basic Excel formulas": cell references, the SUM function, \
 order of operations) — never vague filler like "introduction" or "why it matters".
 OUTPUT STRICT JSON only:
@@ -287,7 +293,7 @@ class GeminiProvider(CourseProvider):
                   f"THIS MODULE: {module_plan['title']}\n"
                   f"OBJECTIVE: {module_plan.get('objective', '')}\n"
                   f"SOURCE BULLETS:\n{src}\n\nWrite this module's slides as JSON.")
-        data = self._json_call(_WRITER_SYSTEM, prompt)
+        data = self._json_call(_WRITER_SYSTEM, prompt, max_tokens=4096)
         if not data or "slides" not in data or not data["slides"]:
             self.degraded += 1
             return self._mock.generate_module(module_plan, course_ctx, skill, prior_titles)
@@ -296,6 +302,7 @@ class GeminiProvider(CourseProvider):
         for s in data["slides"]:
             out.append({"title": str(s.get("title", "Slide"))[:120],
                         "bullets": [str(b) for b in s.get("bullets", [])][:6],
+                        "example": str(s.get("example", "")),
                         "notes": str(s.get("notes", "")),
                         "covers": [str(c) for c in s.get("covers", [])]})
         return out

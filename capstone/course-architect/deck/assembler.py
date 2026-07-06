@@ -12,6 +12,7 @@ from typing import List
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
+from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.util import Inches, Pt
 
@@ -107,8 +108,9 @@ def _content_slide(prs, slide_spec: Slide, theme: Theme, footer: str) -> None:
     tp = ttf.paragraphs[0]
     tr = tp.add_run(); tr.text = slide_spec.title
     _style_run(tr, 28, theme.title, theme.font_title, bold=True)
-    # Bullets
-    btf = _textbox(slide, Inches(0.7), Inches(1.7), Inches(11.9), Inches(5.0))
+    # Bullets (leave room for the example box when present)
+    body_h = 3.5 if slide_spec.example else 5.0
+    btf = _textbox(slide, Inches(0.7), Inches(1.7), Inches(11.9), Inches(body_h))
     first = True
     for bullet in slide_spec.bullets:
         p = btf.paragraphs[0] if first else btf.add_paragraph()
@@ -120,6 +122,21 @@ def _content_slide(prs, slide_spec: Slide, theme: Theme, footer: str) -> None:
         _style_run(run, 18, theme.body, theme.font_body)
     if not slide_spec.bullets:
         btf.paragraphs[0].add_run().text = ""
+    # Worked-example box (content the model produced; layout only here)
+    if slide_spec.example:
+        box = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE,
+                                     Inches(0.7), Inches(5.35), Inches(11.9), Inches(1.5))
+        box.fill.solid(); box.fill.fore_color.rgb = _rgb(theme.band)
+        box.line.fill.background()
+        etf = box.text_frame
+        etf.word_wrap = True
+        etf.margin_left = Inches(0.25); etf.margin_right = Inches(0.25)
+        etf.margin_top = Inches(0.12); etf.margin_bottom = Inches(0.12)
+        ep = etf.paragraphs[0]
+        lab = ep.add_run(); lab.text = "Example   "
+        _style_run(lab, 15, theme.accent, theme.font_body, bold=True)
+        er = ep.add_run(); er.text = slide_spec.example
+        _style_run(er, 15, "FFFFFF", theme.font_body)
     _footer(slide, theme, footer)
     # Speaker notes
     if slide_spec.notes:

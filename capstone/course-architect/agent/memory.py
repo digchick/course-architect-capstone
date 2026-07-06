@@ -50,7 +50,8 @@ class CourseState:
         for m in self.plan.get("modules", []):
             mt = m["title"]
             slides = [Slide(title=s.get("title", ""), bullets=list(s.get("bullets", [])),
-                            notes=s.get("notes", ""), covers=list(s.get("covers", [])))
+                            notes=s.get("notes", ""), example=s.get("example", ""),
+                            covers=list(s.get("covers", [])))
                       for s in self.modules.get(mt, [])]
             sections.append(Section(module_title=mt, objective=m.get("objective", ""),
                                     slides=slides))

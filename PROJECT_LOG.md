@@ -29,6 +29,7 @@ Free Google×Kaggle course, **June 15–19, 2026**. Foundations → production f
 - **VIDEO_SCRIPT.md rewritten** (~4 min teleprompter) — leads with the "type a topic → agent designs the course" wow + Excel demo, coverage self-check, outline-mode, 5-day mapping, close.
 - **SUBMISSION_GUIDE.txt** = full hand-holding: Part B record (Clipchamp / Xbox Game Bar), Part C YouTube upload (user's accounts: main vieve.cooper@gmail.com / brand channel **coopie007**; set Unlisted), Part D Kaggle (accept rules → upload notebook public → New Writeup → paste WRITEUP.md → cover.png → YouTube link → attach notebook → Track=Agents for Business → Submit). Reminds to ROTATE the exposed API key.
 - **README.md updated** (topic mode, launchers, google-genai, 3.1-flash-lite). Offline regression PASS; all deliverables present.
+- **GIT (2026-06-30):** repo initialised + first commit `d148fd1` on `master`, pushed to **PRIVATE** GitHub `digchick/course-architect-capstone` (https://github.com/digchick/course-architect-capstone). `.env`/key + `__pycache__` excluded (verified). To use as the capstone public code link: `gh repo edit digchick/course-architect-capstone --visibility public` (or the Kaggle notebook serves as the public link instead). Commit+push future changes from now on.
 - **USER-SIDE REMAINING (only this):** (1) record the ≤5-min video, (2) upload to YouTube, (3) do the Kaggle clicks per SUBMISSION_GUIDE.txt. Deadline **Jul 6 23:59 PT**. Then ROTATE the API key (was exposed in chat).
 
 ## ⏱ PRIOR STATE — 2026-06-19 (Day 5 / final day)

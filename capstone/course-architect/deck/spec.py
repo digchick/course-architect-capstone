@@ -79,6 +79,7 @@ class Slide:
     title: str
     bullets: List[str] = field(default_factory=list)
     notes: str = ""                       # speaker notes
+    example: str = ""                     # one concrete worked example (rendered in a box)
     covers: List[str] = field(default_factory=list)  # which input bullets this slide addresses
 
 
@@ -115,6 +116,7 @@ class DeckSpec:
             slides = [Slide(title=sl.get("title", ""),
                             bullets=list(sl.get("bullets", [])),
                             notes=sl.get("notes", ""),
+                            example=sl.get("example", ""),
                             covers=list(sl.get("covers", [])))
                       for sl in s.get("slides", [])]
             sections.append(Section(module_title=s.get("module_title", ""),
