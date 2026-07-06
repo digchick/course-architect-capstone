@@ -112,3 +112,10 @@ Orbit Wars (`C:\Projects\orbit-wars`) is our $50k Kaggle **simulation** comp whe
 - Self-play co-evolution: promote champions into the anchor set, then re-climb (AlphaZero-lite, like OW).
 - Parallelise the league; export tool-call traces as metrics (Day-5 production angle).
 - Have the LLM emit a small policy *function* run in a sandbox (the starter-kernel code-gen + Day-4 security pattern).
+
+## 🎬 VIDEO PRODUCED AUTONOMOUSLY (2026-07-06, deadline day — ~21h left at build time)
+- User approved AI narration ("voice is good") → **en-GB-RyanNeural** (edge-tts).
+- **Content upgrade first** (user: "output a bit weak"): skill+writer now demand 4-6 substantial bullets (8-16 words), ONE concrete worked `example` per slide (new Slide.example field → themed rounded example box in assembler), 3-5 sentence notes; outline 4-5×4-5. Verified: Excel rebuild = 22 slides, example boxes render ("type 5+5 → '5+5'; =5+5 → 10", "=MIN(D2:D50)"), 100% coverage, no degradation. Committed c339951 + pushed. Notebook regenerated + nbconvert-verified.
+- **Video pipeline** (scratchpad/video_build/): `make_video_deck.py` builds 10-slide 16:9 deck (cover → problem → one-sentence input → 4 real course slides → coverage log → architecture → close) + narration.json; edge-tts Ryan per-slide MP3s (160s total); PowerPoint COM embeds audio (PlayOnEntry+hidden), auto-advance = duration+1s, `CreateVideo` 1080p30.
+- **RESULT: `capstone/course-architect/Course_Architect_Demo.mp4` — 2:55, 19.4 MB** (≤5min ✓). mp4/mp3 gitignored (video ships via YouTube, not repo).
+- **NEXT: user watches/approves → YouTube upload (channel coopie007 or main, Unlisted) → Kaggle Writeup+submit per SUBMISSION_GUIDE.txt.**
