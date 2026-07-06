@@ -119,3 +119,5 @@ Orbit Wars (`C:\Projects\orbit-wars`) is our $50k Kaggle **simulation** comp whe
 - **Video pipeline** (scratchpad/video_build/): `make_video_deck.py` builds 10-slide 16:9 deck (cover → problem → one-sentence input → 4 real course slides → coverage log → architecture → close) + narration.json; edge-tts Ryan per-slide MP3s (160s total); PowerPoint COM embeds audio (PlayOnEntry+hidden), auto-advance = duration+1s, `CreateVideo` 1080p30.
 - **RESULT: `capstone/course-architect/Course_Architect_Demo.mp4` — 2:55, 19.4 MB** (≤5min ✓). mp4/mp3 gitignored (video ships via YouTube, not repo).
 - **NEXT: user watches/approves → YouTube upload (channel coopie007 or main, Unlisted) → Kaggle Writeup+submit per SUBMISSION_GUIDE.txt.**
+
+## 📺 YOUTUBE LIVE (2026-07-06): https://youtu.be/Ac01bmWL5u4 (Unlisted, channel coopie007, title verified via oEmbed). Repo PUBLIC + root README front page added. Writeup 1,364w incl. "Try it yourself". Remaining: Kaggle notebook upload + Writeup + SUBMIT.
