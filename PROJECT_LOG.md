@@ -130,3 +130,9 @@ Orbit Wars (`C:\Projects\orbit-wars`) is our $50k Kaggle **simulation** comp whe
 
 ## 🔗 NOTEBOOK LINK ADDED (2026-07-06, post-submit) — kept status Submitted
 - User asked if the notebook was sent or only the writeup. It WAS pushed as PUBLIC kernel `markjcooper/course-architect-capstone` (status COMPLETE) but the writeup only linked GitHub. Added the runnable Kaggle notebook as a 2nd Project Link via Insert Resource → Kaggle Code → Owner "Created by you" → Insert → Update Submission → refresh. Writeup now shows BOTH links (GitHub + Kaggle Notebook·Public), still "Submitted!". Participation counters are comp-wide aggregates (3,731→3,771), not per-user proof — the "Submitted!" badge is.
+
+## ✨ REAL GEMINI OUTPUT BAKED INTO NOTEBOOK (2026-07-06) — judges who VIEW now see the good version
+- Added GOOGLE_API_KEY as a Kaggle Secret (Add-ons→Secrets, attached, value masked/private) via editor, then Save Version → "Save & Run All (Commit)". Kaggle re-ran WITH the key.
+- Verified committed course.pptx = **0/14 templated** (real Gemini content: "Unaddressed performance issues escalate into… crises", worked-example boxes). Run status COMPLETE. Notebook public.
+- Writeup Project Link points to the notebook → auto-shows this latest version. Writeup still Submitted.
+- KEY NOTE: exposed key is now ALSO a Kaggle Secret. When user rotates it: update .env + optionally delete/replace the Kaggle Secret (committed output persists regardless).
