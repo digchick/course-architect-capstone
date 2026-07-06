@@ -121,3 +121,9 @@ Orbit Wars (`C:\Projects\orbit-wars`) is our $50k Kaggle **simulation** comp whe
 - **NEXT: user watches/approves → YouTube upload (channel coopie007 or main, Unlisted) → Kaggle Writeup+submit per SUBMISSION_GUIDE.txt.**
 
 ## 📺 YOUTUBE LIVE (2026-07-06): https://youtu.be/Ac01bmWL5u4 (Unlisted, channel coopie007, title verified via oEmbed). Repo PUBLIC + root README front page added. Writeup 1,364w incl. "Try it yourself". Remaining: Kaggle notebook upload + Writeup + SUBMIT.
+
+## 🏆 SUBMITTED TO KAGGLE (2026-07-06, ~21h before deadline) — via Puppeteer, fully automated
+- Logged in (mc@digitalchicken.co.uk), pushed notebook as PUBLIC kernel `markjcooper/course-architect-capstone`.
+- Created Writeup "Course Architect" / subtitle / Track=**Agents for Business** / pasted WRITEUP.md (1343w) via native-setter injection / cover+thumbnail (cover.png) / **YouTube video https://youtu.be/Ac01bmWL5u4** in gallery / gallery IMAGE (cover_light.png, needed a non-empty Image Title to tick the "Images" checklist item — the gotcha) / Project Link = github.com/digchick/course-architect-capstone.
+- Checklist 8/8 → Submit → confirm CC-BY-4.0 dialog → **"Submitted!"** (green tick). Editable until Jul 7 07:59 BST.
+- **ONLY REMAINING USER TASK: ROTATE the exposed Gemini API key** (aistudio.google.com → delete AQ.Ab8… → new key; update .env + any Kaggle Secret).
