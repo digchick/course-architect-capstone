@@ -136,3 +136,9 @@ Orbit Wars (`C:\Projects\orbit-wars`) is our $50k Kaggle **simulation** comp whe
 - Verified committed course.pptx = **0/14 templated** (real Gemini content: "Unaddressed performance issues escalate into… crises", worked-example boxes). Run status COMPLETE. Notebook public.
 - Writeup Project Link points to the notebook → auto-shows this latest version. Writeup still Submitted.
 - KEY NOTE: exposed key is now ALSO a Kaggle Secret. When user rotates it: update .env + optionally delete/replace the Kaggle Secret (committed output persists regardless).
+
+## 🖼️ CONTEXT-ENGINEERING SHOWCASE ADDED TO WRITEUP GALLERY (2026-07-06)
+- User idea: use the agent to build a course on a topic FROM the 5-day course (meta-demo). Chose "Context engineering for AI agents".
+- Built via run_demo --topic → "Architecting Coherent AI Agents…", 22 slides, 100% coverage, real Gemini (ReAct loops w/ db_query example, session metadata JSON, vector DBs). File: Context Engineering Course.pptx.
+- Made captioned gallery image (context_engineering_showcase.png = navy caption strip + ReAct Loops slide), pushed to public repo, added to Writeup Media Gallery via Insert flow (Add Image → title → Upload → crop Save → outer Save → Update Submission).
+- Gotcha handled: two upload attempts created duplicate ReAct images + title landed on cover; cleaned up (fixed cover title, set ReAct caption, deleted duplicate via ··· → Delete). Final gallery = 3 items: video + cover + ctx-showcase. Writeup still "Submitted!".
