@@ -142,3 +142,9 @@ Orbit Wars (`C:\Projects\orbit-wars`) is our $50k Kaggle **simulation** comp whe
 - Built via run_demo --topic → "Architecting Coherent AI Agents…", 22 slides, 100% coverage, real Gemini (ReAct loops w/ db_query example, session metadata JSON, vector DBs). File: Context Engineering Course.pptx.
 - Made captioned gallery image (context_engineering_showcase.png = navy caption strip + ReAct Loops slide), pushed to public repo, added to Writeup Media Gallery via Insert flow (Add Image → title → Upload → crop Save → outer Save → Update Submission).
 - Gotcha handled: two upload attempts created duplicate ReAct images + title landed on cover; cleaned up (fixed cover title, set ReAct caption, deleted duplicate via ··· → Delete). Final gallery = 3 items: video + cover + ctx-showcase. Writeup still "Submitted!".
+
+## ⭐ FINALE WOW — SELF-CORRECTION SHOWCASE ADDED (2026-07-06)
+- The differentiator ("it checks its own work and FIXES it") was only described, never shown. Made it real: `demo_self_correction.py` runs a FlakyWriter that drops one point ("The difference between feedback and criticism"); the coverage tool catches it → 8/9 (89%), agent regenerates that module → 9/9 (100%). REAL data.
+- Built branded graphic `self_correction_showcase.png` (STEP1 draft 8/9 amber + red "dropped a point" → STEP2 loop "regenerates just that module" → STEP3 re-check 9/9 green) from the real run. Pushed to public repo.
+- Added as 4th gallery image on the writeup (Add Image → Upload → crop Save → title → outer Save → Update Submission). Gallery now = 4 items: video + cover + context-engineering + self-correction. Writeup still "Submitted!". DOM-verified 4 thumbnails.
+- FINAL ENTRY COMPLETE. Only outstanding: user rotates exposed Gemini key.
