@@ -113,6 +113,18 @@ it **verifies its own coverage and self-corrects**, so scope is guaranteed rathe
 for; and it treats the LLM as a *writer wired to tools and a goal* — planning, remembering,
 acting, and checking — which is exactly what an agent is, as opposed to a single model call.
 
+## Try it yourself
+
+- **Easiest:** open the attached Kaggle notebook and click **Run All**. It installs its own
+  dependencies and builds a complete deck **with no API key needed** (a deterministic offline
+  writer stands in for Gemini). Add a Kaggle Secret named `GOOGLE_API_KEY` (free at
+  aistudio.google.com) and re-run to watch Gemini write the real content.
+- **Your own course:** in the notebook, edit the outline cell (section 3) — or hand
+  `architect.build()` a one-line topic and the agent designs the outline itself (section 6).
+- **From the code:** `pip install python-pptx google-genai`, then
+  `python run_demo.py --topic "any course you want"` → a finished `.pptx` opens. Non-coders
+  get one-click launchers (`Describe a Course.bat`) and a plain-English `HOW TO USE.txt`.
+
 ## Limitations & next steps
 
 - **Layouts are template-based** (title / section / content / summary). Two-column, image, and
